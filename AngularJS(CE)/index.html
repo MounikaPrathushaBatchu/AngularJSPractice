@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AngularJS</title>
+
+        <style type="text/css">
+            .ng-inalid.ng-dirty {
+                border-color: red;
+            }
+            .ng-valid.ng-dirty {
+                border-color: green;
+            }
+            input,textarea {
+                border: 2px solid;
+            }
+        </style>
+        
+    </head>
+    <body ng-app="myApp" >
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="review.js"></script>
+
+<!-- using ng-bind method ** ng-init="a=5;b=6;" ** -->
+        <!-- <p>the area is : {{a*b}}</p>
+        <p>the area using binding is : <span ng-bind="a*b"></span></p> -->
+
+<!-- using ng-bind method ** ng-init="a='Hello';b='World';" ** -->
+        <!-- <p>fullName : {{a+" "+b}}</p>
+        <p>Full Name : <span ng-bind="a+'---'+b"></span></p> -->
+
+<!-- for iterating array of elements by using ng-repaeat method ** ng-init="numbers=[0,1,2,3,4,5,6,7,8,9,10];" ** --> 
+        <!--<p>Number is {{numbers[0]}}</p>
+        <p ng-repeat="n in numbers">Number is :{{n}} </p> -->
+
+        <!-- <div ng-init="name='pqr mno'">
+            {{name}}
+        </div> -->
+
+        <!-- using ng-controller present in app.js with name MyController -->
+        <div ng-controller="MyController"> 
+
+            <!-- variables calling and these are not accessed outside the <div>  -->
+            <!-- <p>Name : {{name}}</p> 
+            <p>Age : {{age}} </p>
+            <p ng-hide="isSpy">First Name : {{fname}}</p> 
+            <p ng-hide="isSpy">Last name : {{lname}} </p> -->
+            <!-- function calling -->
+            <!-- <p ng-hide="isSpy">Full Name : {{fullName()}}</p>   
+            <p ng-show ="isSpy">Code Name : {{codeName}}</p> -->
+
+            <!-- loading array of elements orderBy is nagtive value it display in descending order -->
+                <!-- <div ng-repeat="e in emps | orderBy:'sal'">
+                    <p>First Name : {{e.fname | uppercase | limitTo:4}}</p>
+                    <p>Last Name : {{e.lname | lowercase | limitTo:1}}</p>
+                    <p>Sal : {{e.sal | currency}}</p>
+                </div> -->
+
+            <!-- <button ng-click="count1 = count1 + 1;toggleShow()">Show-Click</button>
+            <p ng-show="show">Count1 : {{count1}}</p><br><br>
+            <button ng-click="count2 = count2 + 1;toggleShow()">Hide-Click</button>
+            <p ng-hide="show">Count2 : {{count2}}</p> -->
+
+            <h4>Reviwes</h4>
+            <div ng-repeat="r in reviews">
+                <div style="background-color:rgb(240, 227, 227);">
+                    <p>{{r.comment}}</p>
+                    <p><b>{{r.by}}</b</p>
+                </div>
+            </div>
+
+        </div>
+        <form name="reviewForm" ng-submit=" reviewForm.$valid && addReview()" novalidate>
+            <p>{{form.comment}}</p>
+            <p>{{form.by}}</p>
+
+            <label>Comment</label><br>
+            <textarea ng-model="form.comment" required></textarea><br>
+            <label>Email</label><br>
+            <input type="email" ng-model="form.by" required /><br><br>
+            <input type="submit" value="Add Review"><br>
+
+            <p>Form Valid? {{reviewForm.$valid}}</p>
+        </form>
+        <!-- <div ng-include="'userInfo.html'"></div> -->
+        <div userInform></div>
+
+    </body>
+</html>
