@@ -68,28 +68,28 @@ var app = angular
 
 
 // Custom filter
-// var app = angular
-//                 .module("myModule",[])
-//                 // custom filter
-//                 .filter("gender", function(){
-//                     return function(gender) {
-//                         switch(gender){
-//                             case 1:
-//                                 return "Male";
-//                             case 2:
-//                                 return "Female";
-//                             case 3:
-//                                 return "Not Disclosed";
-//                         }
-//                     }
-//                 })
-//                 .controller("myController", function($scope) {
-//                     var employees =[
-//                         { name:"Ben", city:"Mumbai", gender:1 },
-//                         { name:"Benten", city:"Chennai", gender:2 },
-//                         { name:"Adem", city:"Hyd", gender:1 },
-//                         { name:"Todd", city:"Kolkota", gender:2 },
-//                         { name:"Sara", city:"Delhi", gender:3 }
-//                     ];
-//                     $scope.employees = employees;
-//                 });
+var app = angular
+                .module("myModule",[])
+                // custom filter
+                .filter("gender", function(){
+                    return function(gender) {
+                        switch(gender){
+                            case 1:
+                                return "Male";
+                            case 2:
+                                return "Female";
+                            case 3:
+                                return "Not Disclosed";
+                        }
+                    }
+                })
+                .controller("myController", function($scope) {
+                    var employees =[
+                        { name:"Ben", city:"Mumbai", gender:1 },
+                        { name:"Benten", city:"Chennai", gender:2 },
+                        { name:"Adem", city:"Hyd", gender:1 },
+                        { name:"Todd", city:"Kolkota", gender:2 },
+                        { name:"Sara", city:"Delhi", gender:3 }
+                    ];
+                    $scope.employees = employees;
+                });
