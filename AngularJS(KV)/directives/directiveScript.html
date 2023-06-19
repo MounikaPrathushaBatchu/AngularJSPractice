@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Angular JS - directives</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="directiveScript.js"></script>
+        <style>
+            table {
+                    border-collapse: collapse;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            td {
+                border: 1px solid black;
+                padding: 10px;
+                text-align: center;
+            }
+            th {
+                border: 1px solid black;
+                padding: 10px;
+                /* text-align: left; 
+                cursor: pointer;*/
+            }
+        </style>
+    </head>
+    <body ng-app="myModule">
+         <!-- ng-hide & ng-show directives -->
+        <!-- <div ng-controller="myController">
+
+           
+            <input type="checkbox" ng-model="hideSalary"  /> Hide Salary
+            <br><br>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th ng-hide="hideSalary">Salary</th>
+                    <th ng-show="hideSalary">Salary</th>
+                </tr>
+                <tr ng-repeat="employee in employees">
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.gender }}</td>
+                    <td>{{ employee.city }}</td>
+                    <td ng-hide="hideSalary">{{ employee.salary }}</td>
+                    <td ng-show="hideSalary">######</td>
+                </tr>
+            </table>
+
+        </div> -->
+
+        <!-- ng-init -->
+        <!-- <div ng-init="employees = [
+                { name : 'Ben', gender : 'Male', salary : 5500.78, city:'London' },
+                { name : 'Sara', gender : 'Female', salary : 5800.12, city:'Chennai' },
+                { name : 'Mark', gender : 'Male', salary : 6500.38, city:'Hyderabad' },
+                { name : 'Pam', gender : 'Female', salary : 5500.786, city:'Mumbai' },
+                { name : 'Todd', gender : 'Male', salary : 6200.41, city:'London' }
+            ]">
+            <table>
+                <tr>
+                 <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                </tr>
+                <tr ng-repeat="employee in employees">
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.gender }}</td>
+                    <td>{{ employee.city }}</td>
+                    <td>{{ employee.salary }}</td>
+                </tr>
+        </table>
+        </div> -->
+
+        <!-- for ng-init see list of countries and cities with in that countries -->
+
+        <!-- ng-include -->
+        <div ng-controller="myController">
+            <!-- <div ng-include="'employeeTable.html'"></div> -->
+            <!-- <div ng-include="empView"></div> -->
+
+            Select Option : <select ng-model="empView">
+                <option value="EmployeeTable.html">Table</option>
+                <option value="EmployeeList.html">List</option>
+            </select>
+            <br><br>
+            <div ng-include="empView"></div>
+
+        </div>
+
+    </body>
+</html>
