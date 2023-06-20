@@ -80,7 +80,7 @@
 
             
             <!-- Sorting by clicking on table head -->
-            <!-- <table>
+            <table>
                 <tr>
                     <th ng-click="sortData('name')">
                         Name <div ng-class="getSortClass('name')"></div>
@@ -101,7 +101,7 @@
                     <td>{{ employee.gender | lowercase }}</td>
                     <td>{{ employee.salary | currency:"$":2 }}</td>
                 </tr>
-            </table> -->
+            </table>
 
             <!-- Search in the whole table i.e., in all the columns present in table use this directive *ng-model="searchText* -->
             <!-- Search only in clomn i.e., in city column use this directive *ng-model="searchText.city* -->
@@ -147,7 +147,7 @@
             </table> -->
 
             <!-- Custom filter -->
-            <table>
+            <!-- <table>
                 <tr>
                     <th>Name</th>
                     <th>City</th>
@@ -160,7 +160,7 @@
                     <td>{{ employee.gender }}</td>
                     <td>{{ employee.gender | gender }}</td>
                 </tr>
-            </table>
+            </table> -->
 
         </div>
     </body>
