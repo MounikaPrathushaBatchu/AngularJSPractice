@@ -1,13 +1,15 @@
 <html>
-    <head>
-        <title>AngularJS - filters</title>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-        <script src="FilterScript.js"></script>
-        <link rel="stylesheet" href="filterScript.css">
-    </head>
-    <body ng-app="myModule">
-        <div ng-controller="myController">
-            <!-- Number of to be displayed : <input type="number" step="1" min="0" max="10" ng-model="row_limit" /><br><br>
+
+<head>
+    <title>AngularJS - filters</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="FilterScript.js"></script>
+    <link rel="stylesheet" href="filterScript.css">
+</head>
+
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <!-- Number of to be displayed : <input type="number" step="1" min="0" max="10" ng-model="row_limit" /><br><br>
             <table>
                 <tr>
                     <th>Name</th>
@@ -25,8 +27,8 @@
                 </tr>
             </table> -->
 
-            <!-- Sorting by select box -->
-            <!-- Order By : <select ng-model="sortColumn">
+        <!-- Sorting by select box -->
+        <!-- Order By : <select ng-model="sortColumn">
                 <option value="name">Name Ascending</option>
                 <option value="gender">Gender Ascending</option>
                 <option value="dateOfBirth">Date of Birth Ascending</option>
@@ -47,9 +49,9 @@
                 </tr>
             </table> -->
 
-            
-            <!-- Sorting by clicking on table head -->
-            <!-- <table>
+
+        <!-- Sorting by clicking on table head -->
+        <!-- <table>
                 <tr>
                     <th ng-click="sortData('name')">
                         Name <div ng-class="getSortClass('name')"></div>
@@ -72,10 +74,10 @@
                 </tr>
             </table> -->
 
-            <!-- Search in the whole table i.e., in all the columns present in table use this directive *ng-model="searchText* -->
-            <!-- Search only in clomn i.e., in city column use this directive *ng-model="searchText.city* -->
-            
-            <!-- Search : <input type="text" placeholder="Search City" ng-model="searchText.city" />
+        <!-- Search in the whole table i.e., in all the columns present in table use this directive *ng-model="searchText* -->
+        <!-- Search only in clomn i.e., in city column use this directive *ng-model="searchText.city* -->
+
+        <!-- Search : <input type="text" placeholder="Search City" ng-model="searchText.city" />
             <input type="text" placeholder="Search Name" ng-model="searchText.name" />
             <input type="checkbox" ng-model="exactMatch" />Exact Match
             <br><br>
@@ -96,27 +98,27 @@
                 </tr>
             </table> -->
 
-            <!-- seraching based on 2 columns only -->
-            Search : <input type="text" placeholder="Search by City and Name" ng-model="searchText" /><br><br>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Date Of Birth</th>
-                    <th>Gender</th>
-                    <th>Salary</th>
-                    <th>City</th>
-                </tr>
-                <tr ng-repeat="employee in employees | filter:search">
-                    <td>{{ employee.name | uppercase }}</td>
-                    <td>{{ employee.dateOfBirth |date:"dd/MM/yyyy" }}</td>
-                    <td>{{ employee.gender | lowercase }}</td>
-                    <td>{{ employee.salary | currency:"$":2 }}</td>
-                    <td>{{ employee.city }}</td>
-                </tr>
-            </table>
+        <!-- seraching based on 2 columns only -->
+        Search : <input type="text" placeholder="Search by City and Name" ng-model="searchText" /><br><br>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Date Of Birth</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>City</th>
+            </tr>
+            <tr ng-repeat="employee in employees | filter:search">
+                <td>{{ employee.name | uppercase }}</td>
+                <td>{{ employee.dateOfBirth |date:"dd/MM/yyyy" }}</td>
+                <td>{{ employee.gender | lowercase }}</td>
+                <td>{{ employee.salary | currency:"$":2 }}</td>
+                <td>{{ employee.city }}</td>
+            </tr>
+        </table>
 
-            <!-- Custom filter -->
-            <!-- <table>
+        <!-- Custom filter -->
+        <!-- <table>
                 <tr>
                     <th>Name</th>
                     <th>City</th>
@@ -131,6 +133,7 @@
                 </tr>
             </table> -->
 
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
