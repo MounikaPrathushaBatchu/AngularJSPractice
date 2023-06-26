@@ -1,28 +1,48 @@
 <html>
-    <head>
-        <title>AngularJS - DOM</title>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    </head>
-    <body>
-        <div ng-app="">
-            <table>
-                <tr>
-                    <td><input type="checkbox" ng-model="enableDisableButton" />Disable Button</td>
-                    <td><button ng-disabled="enableDisableButton">DISABLE</button></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" ng-model="show" />Show Button</td>
-                    <td><button ng-show="show">SHOW</button></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" ng-model="hide" />Hide Button</td>
-                    <td><button ng-hide="hide">HIDE</button></td>
-                </tr>
-                <tr>
-                    <td>Counter : {{ clickCounter }}</td>
-                    <td><button ng-click="clickCounter = clickCounter + 1">Counter</button></td>
-                </tr>
-            </table>
-        </div>
-    </body>
+
+<head>
+    <title>AngularJS - DOM</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="">
+        <table>
+            <tr>
+                <td><input type="checkbox" ng-model="enableDisableButton" />Disable Button</td>
+                <td><button ng-disabled="enableDisableButton">DISABLE</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" ng-model="show" />Show Button</td>
+                <td><button ng-show="show">SHOW</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" ng-model="hide" />Hide Button</td>
+                <td><button ng-hide="hide">HIDE</button></td>
+            </tr>
+            <tr>
+                <td>Counter : {{ clickCounter }}</td>
+                <td><button ng-click="clickCounter = clickCounter + 1">Counter</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
 </html>
