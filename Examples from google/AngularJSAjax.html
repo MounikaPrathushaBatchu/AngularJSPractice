@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>AngularJS - AJAX</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="AngularJSAjax.js"></script>
+</head>
+
+<body ng-app="moduleAjax">
+    <div ng-controller="myAJAXController">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>City</th>
+            </tr>
+            <!-- didn't get data from .txt file -->
+            <tr ng-repeat="employee in employees">
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.gender }}</td>
+                <td>{{ employee.salary }}</td>
+                <td>{{ employee.city }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
