@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>AngularJS - View</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="view.js"></script>
+</head>
+
+<body ng-app="myView">
+    <div>
+        <p><a href="#addStudent">Add Student</a></p>
+        <p><a href="#viewStudents">View Student</a></p>
+        <div ng-view></div>
+
+        <script type="text/ng-template" id="addStudent.html">
+                <h4>Add Students</h4>
+                {{ message }}
+        </script>
+
+        <script type="text/ng-template" id="viewStudent.html">
+                <h4>View Students</h4>
+                {{ message }}
+        </script>
+    </div>
+</body>
+
+</html>
