@@ -1,30 +1,30 @@
 // var app = angular
-//                 .module("myModule",[])
-//                 .controller("myController",function($scope){
-//                     var employees = [
-//                         { name : "Ben",dateOfBirth : new Date("November 23 1980"),gender : "Male",salary : 5500.78 },
-//                         { name : "Sara",dateOfBirth : new Date("May 05 1970"),gender : "Female",salary : 5800.12 },
-//                         { name : "Mark",dateOfBirth : new Date("August 15 1974"),gender : "Male",salary : 6500.38 },
-//                         { name : "Pam",dateOfBirth : new Date("October 27 1979"),gender : "Female",salary : 5500.786 },
-//                         { name : "Todd",dateOfBirth : new Date("December 30 1983"),gender : "Male",salary : 6200.41 }
-//                     ];
-//                     $scope.employees = employees;
-//                     // $scope.row_limit = 2;
-//                     $scope.sortColumn = "name";
-//                     $scope.reverseSort = false;
+//     .module("myModule", [])
+//     .controller("myController", function ($scope) {
+//         var employees = [
+//             { name: "Ben", dateOfBirth: new Date("November 23 1980"), gender: "Male", salary: 5500.78 },
+//             { name: "Sara", dateOfBirth: new Date("May 05 1970"), gender: "Female", salary: 5800.12 },
+//             { name: "Mark", dateOfBirth: new Date("August 15 1974"), gender: "Male", salary: 6500.38 },
+//             { name: "Pam", dateOfBirth: new Date("October 27 1979"), gender: "Female", salary: 5500.786 },
+//             { name: "Todd", dateOfBirth: new Date("December 30 1983"), gender: "Male", salary: 6200.41 }
+//         ];
+//         $scope.employees = employees;
+//         // $scope.row_limit = 2;
+//         $scope.sortColumn = "name";
+//         $scope.reverseSort = false;
 
-//                     $scope.sortData = function (column) {
-//                         $scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false;
-//                         $scope.sortColumn = column;
-//                     }
+//         $scope.sortData = function (column) {
+//             $scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false;
+//             $scope.sortColumn = column;
+//         }
 
-//                     $scope.getSortData = function(column) {
-//                         if($scope.sortColumn == column) {
-//                             return $scope.reverseSort ? 'arrow-down' :'arrow-up';
-//                         }
-//                         return '';
-//                     }
-//                 });
+//         $scope.getSortData = function (column) {
+//             if ($scope.sortColumn == column) {
+//                 return $scope.reverseSort ? 'arrow-down' : 'arrow-up';
+//             }
+//             return '';
+//         }
+//     });
 
 // for Searching
 // var app = angular
