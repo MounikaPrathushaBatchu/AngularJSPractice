@@ -1,16 +1,17 @@
 <html>
 
 <head>
+    <title>Custom Directive</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="directiveWithTrueScope.js"></script>
+    <script src="CustomDirective.js"></script>
 </head>
 
 <body>
     <div ng-app="test">
         <div ng-controller="parentController">
-            <h2>Hey {{name}}</h2>
+            <h2>Hey {{ name }}</h2>
             <div>
-                Change Form Header : <input type-="text" ng-model="name" />
+                Change Form Header : <input type="text" ng-model="name" />
             </div>
             <br />
             <hr />
@@ -22,16 +23,18 @@
 
     <div ng-app="app">
         <div class="parent" ng-controller="MainCtrl">
+            <br />
             <div class="line">
                 Name inside parent scope is:<input type="text" ng-model="name" />
             </div>
+            <br />
             <div class="line">
                 Last name inside parent scope is:
                 <input type="text" ng-model="lastName" />
             </div>
             <br />
             <hr />
-            <div class="directive" my-directive name="{{name}}" last-name="lastName"></div>
+            <div class="directive" my-directive name="{{ name }}" last-name="lastName"></div>
         </div>
     </div>
 
